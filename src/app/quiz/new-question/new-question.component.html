@@ -1,0 +1,14 @@
+<form (ngSubmit)="AddQuestion()" [formGroup]="newQuestionForm" >
+  <label class="question">Pytanie: <input type="text" formControlName="question" /></label>
+  <label>Odpowiedz A: <input type="text" formControlName="answerA" /></label>
+  <label>Odpowiedz B: <input type="text" formControlName="answerB"/></label>
+  <label>Odpowiedz C: <input type="text" formControlName="answerC"/></label>
+  <label>Odpowiedz D: <input type="text" formControlName="answerD"/></label>
+  <label>Poprawna Odpowiedz <select formControlName="correctAnswer">
+  <option value="0">A</option>
+  <option value="1">B</option>
+  <option value="2">C</option>
+  <option value="3">D</option>
+</select></label>
+  <button type="submit">Dodaj Pytanie</button>
+</form>

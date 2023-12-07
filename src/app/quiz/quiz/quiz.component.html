@@ -1,0 +1,9 @@
+<button *ngIf="!isGameOn" (click)="StartGame()">Zagraj</button>
+
+<div class="game" *ngIf="isGameOn">
+  <app-question [question]="currentQuestion" (grantPoints)="GoToNextQuestion($event)"></app-question>
+</div>
+
+<div class="score" *ngIf="isEndGame">
+  <p>Twój wynik to : {{score}}</p>
+</div>

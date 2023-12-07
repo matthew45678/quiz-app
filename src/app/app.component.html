@@ -1,0 +1,3 @@
+<app-quiz *ngIf="mode" (currentlyPlaying)="ChangeAppModeA($event)"></app-quiz>
+<app-new-question *ngIf="!mode"></app-new-question>
+<button *ngIf="!isGameOn" (click)="ChangeAppMode()">{{button}}</button>

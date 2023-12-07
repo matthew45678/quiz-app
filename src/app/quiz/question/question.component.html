@@ -1,0 +1,10 @@
+<p>{{questions[question].question}}</p>
+<form (ngSubmit)="checkAnswer(form)" #form="ngForm">
+  <label><input type="radio"  name="answer" [(ngModel)]="answer" [value]="0">Odpowiedź A: {{questions[question].answerA}}</label>
+  <label><input type="radio"  name="answer" [(ngModel)]="answer" [value]="1">Odpowiedź B: {{questions[question].answerB}}</label>
+  <label><input type="radio"  name="answer" [(ngModel)]="answer" [value]="2">Odpowiedź C: {{questions[question].answerC}}</label>
+  <label><input type="radio"  name="answer" [(ngModel)]="answer" [value]="3">Odpowiedź D: {{questions[question].answerD}}</label>
+  <button type="submit">Dalej</button>
+</form>
+
+<p *ngIf="!isvalid">Musisz zaznaczyc pytanie</p>
